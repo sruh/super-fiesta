@@ -5,7 +5,7 @@ function i18n(template) {
     return out.join('');
 }
 if (navigator.language.includes('de')) {
-    i18n.locale = 'bg';
+    i18n.locale = 'de';
 } else if (navigator.language.includes('bg')) {
     i18n.locale = 'bg';
 } else i18n.locale = 'en';
