@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <script src="assets/js/i18n.js"></script>
 </head>
 
 <body class="is-preload">
     <!-- Header -->
     <div id="header">
+        <div style="position: absolute; top: 20px; right: 20px;">
+            <button class="flag" onclick="i18n_load('de')">🇩🇪</button>
+            <button class="flag" onclick="i18n_load('bg')">🇧🇬</button>
+            <button class="flag" onclick="i18n_load('en')">🇬🇧</button>
+        </div>
         <span class="logo icon"><img src="images/rings.svg"></span>
-        <h1><script>document.write(i18n`Eli &amp; Stefan are getting married`)</script></h1>
-        <p><a href="#rsvp" class="button hvr-pulse-grow"><script>document.write(i18n`RSVP right away`)</script></a></p>
+        <h1 data-i18n-key="title"></h1>
+        <p><a href="#rsvp" class="button hvr-pulse-grow" data-i18n-key="rsvp-now"></a></p>
     </div>
     <!-- Main -->
     <div id="main">
@@ -30,21 +34,21 @@
             <section class="feature left">
                 <a href="#" class="image icon fa-calendar"><img vheight="10%" src="images/pic01.jpg" alt="" /></a>
                 <div class="content">
-                    <h3><script>document.write(i18n`When?`)</script></h3>
+                    <h3 data-i18n-key="when"></h3>
                     <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
                 </div>
             </section>
             <section class="feature right">
                 <a href="geo:37.786971,-122.399677" class="image icon fa-map-marker"><img src="images/pic02.jpg" alt="" /></a>
                 <div class="content">
-                    <h3><script>document.write(i18n`Where?`)</script></h3>
+                    <h3 data-i18n-key="where"></h3>
                     <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
                 </div>
             </section>
             <section class="feature left">
-                <a href="#" class="image icon fa-question"><img src="images/pic03.jpg" alt="" /></a>
+                <a href="#" onclick="i18n_load('bg')" class="image icon fa-question"><img src="images/pic03.jpg" alt="" /></a>
                 <div class="content">
-                    <h3><script>document.write(i18n`What else?`)</script></h3>
+                    <h3 data-i18n-key="what-else"></h3>
                     <p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
                 </div>
             </section>
@@ -104,6 +108,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact.js"></script>
+    <script src="assets/js/i18n.js"></script>
 </body>
-
 </html>
