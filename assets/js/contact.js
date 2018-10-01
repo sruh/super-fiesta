@@ -24,8 +24,8 @@ $(function() {
             $(formMessages).addClass('success');
 
             // Set the message text.
-            $(formMessages).text(response);
-            $formMessages.setAttribute("data-i18n-key", response);
+            $(formMessages).text(i18n(data.responseText));
+            $(formMessages).attr("data-i18n-key", response);
 
             // Clear the form.
             $('#name').val('');

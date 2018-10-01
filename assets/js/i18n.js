@@ -68,6 +68,10 @@ i18n.db = {
         "form-thank-you-sent": {
             "t": ["Vielen Dank, ihre Nachricht wurde verschickt."],
             "v": []
+        },
+        "form-error": {
+            "t": ["Aufgrund eines Fehlers konnte das Formular nicht abgesendet werden."],
+            "v": []
         }
 
     },
@@ -98,6 +102,10 @@ i18n.db = {
         },
         "form-thank-you-sent": {
             "t": ["Thank you, your message has been sent. BG"],
+            "v": []
+        },
+        "form-error": {
+            "t": ["Your message could not be sent due to an error. BG"],
             "v": []
         }
     }
