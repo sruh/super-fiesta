@@ -33,10 +33,22 @@ body {
 	line-height: 1;
 }
 
+#flags {
+	position: absolute;
+	top: 1.2em;
+	right: 1em;
+}
+
 .flag {
 	background: transparent;
 	border: none;
-	font-size: 1.5em;
+	outline:none;
+}
+
+.flag img {
+	height: 2em;
+	filter:opacity(50%);
+	border: 1px solid rgba(239, 239, 239, 0.5);
 }
 
 .success {
