@@ -35,7 +35,7 @@ body {
 
 #flags {
 	position: absolute;
-	top: 1.2em;
+	top: 1em;
 	right: 1em;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .flag img {
-	height: 2em;
+	width: 7vw;
 	filter:opacity(50%);
 	border: 1px solid rgba(239, 239, 239, 0.5);
 }
