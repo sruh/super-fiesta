@@ -27,8 +27,16 @@ i18n.db = {
             "t": ["RSVP right away"],
             "v": []
         },
-        "please-complete": {
+        "form-please-complete": {
             "t": ["Please complete the form."],
+            "v": []
+        },
+        "form-thank-you-sent": {
+            "t": ["Thank you, your message has been sent."],
+            "v": []
+        },
+        "form-error": {
+            "t": ["Your message could not be sent due to an error."],
             "v": []
         }
     },
@@ -53,8 +61,12 @@ i18n.db = {
             "t": ["Sofort antworten"],
             "v": []
         },
-        "please-complete": {
+        "form-please-complete": {
             "t": ["Das Formular bitte vollständig ausfüllen"],
+            "v": []
+        },
+        "form-thank-you-sent": {
+            "t": ["Vielen Dank, ihre Nachricht wurde verschickt."],
             "v": []
         }
 
@@ -80,12 +92,16 @@ i18n.db = {
             "t": ["Test"],
             "v": []
         },
-        "please-complete": {
+        "form-please-complete": {
             "t": ["Please complete the foo bar baz."],
+            "v": []
+        },
+        "form-thank-you-sent": {
+            "t": ["Thank you, your message has been sent. BG"],
             "v": []
         }
     }
-};
+};  // 
 function i18n_load(locale){
   if (locale == null){
     if (navigator.language.includes('de')) {
@@ -98,6 +114,6 @@ function i18n_load(locale){
     i18n.locale = locale;
   }
   var elements = document.querySelectorAll('[data-i18n-key]');
-  Array.from(elements, (el) => {el.innerHTML = i18n(`${el.getAttribute('data-i18n-key')}`)});
+  Array.from(elements, (el) => {el.innerHTML = i18n(el.getAttribute('data-i18n-key'))});
 }
 i18n_load();

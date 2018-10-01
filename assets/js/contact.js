@@ -25,6 +25,7 @@ $(function() {
 
             // Set the message text.
             $(formMessages).text(response);
+            $formMessages.setAttribute("data-i18n-key", response);
 
             // Clear the form.
             $('#name').val('');
@@ -37,9 +38,10 @@ $(function() {
 
             // Set the message text.
             if (data.responseText !== '') {
-                $(formMessages).text(i18n(`${data.responseText}`));
+                $(formMessages).text(i18n(data.responseText));
+                $formMessages.setAttribute("data-i18n-key", data.responseText);
             } else {
-                $(formMessages).text('Ihre Nachricht konnte aufgrund eines Fehlers nicht verschickt werden.');
+                $(formMessages).text(i18n('form-error'));
             }
         });
     });

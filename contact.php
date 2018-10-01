@@ -12,7 +12,7 @@
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "please-complete";
+            echo "form-please-complete";
             exit;
         }
 
@@ -34,11 +34,11 @@
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank you, your message has been sent.";
+            echo "form-thank-you-sent";
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Your message could not be sent due to an error.";
+            echo "form-error";
         }
 
     } else {
