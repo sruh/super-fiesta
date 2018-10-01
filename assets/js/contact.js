@@ -39,7 +39,7 @@ $(function() {
             // Set the message text.
             if (data.responseText !== '') {
                 $(formMessages).text(i18n(data.responseText));
-                $(formMessages).setAttribute("data-i18n-key", data.responseText);
+                $(formMessages).attr("data-i18n-key", data.responseText);
             } else {
                 $(formMessages).text(i18n('form-error'));
             }
