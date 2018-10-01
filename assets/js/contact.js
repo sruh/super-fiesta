@@ -37,7 +37,7 @@ $(function() {
 
             // Set the message text.
             if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
+                $(formMessages).text(i18n`${data.responseText}`);
             } else {
                 $(formMessages).text('Ihre Nachricht konnte aufgrund eines Fehlers nicht verschickt werden.');
             }

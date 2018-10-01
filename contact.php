@@ -12,7 +12,7 @@
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Please complete the form.";
+            echo "please-complete";
             exit;
         }
 

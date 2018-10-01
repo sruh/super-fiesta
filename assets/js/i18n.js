@@ -26,6 +26,10 @@ i18n.db = {
         "rsvp-now": {
             "t": ["RSVP right away"],
             "v": []
+        },
+        "please-complete": {
+            "t": ["Please complete the form."],
+            "v": []
         }
     },
     "de": {
@@ -47,6 +51,10 @@ i18n.db = {
         },
         "rsvp-now": {
             "t": ["Sofort antworten"],
+            "v": []
+        },
+        "please-complete": {
+            "t": ["Das Formular bitte vollständig ausfüllen"],
             "v": []
         }
 
@@ -71,8 +79,11 @@ i18n.db = {
         "rsvp-now": {
             "t": ["Test"],
             "v": []
+        },
+        "please-complete": {
+            "t": ["Please complete the foo bar baz."],
+            "v": []
         }
-
     }
 };
 function i18n_load(locale){
