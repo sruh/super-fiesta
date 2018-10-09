@@ -38,6 +38,14 @@ i18n.db = {
         "form-error": {
             "t": ["Your message could not be sent due to an error."],
             "v": []
+        },
+        "message": {
+            "t": ["Message"],
+            "v": []
+        },
+        "send-message": {
+            "t": ["Send Message"],
+            "v": []
         }
     },
     "de": {
@@ -71,6 +79,14 @@ i18n.db = {
         },
         "form-error": {
             "t": ["Aufgrund eines Fehlers konnte das Formular nicht abgesendet werden."],
+            "v": []
+        },
+        "message": {
+            "t": ["Nachricht"],
+            "v": []
+        },
+        "send-message": {
+            "t": ["Nachricht senden"],
             "v": []
         }
 
@@ -107,6 +123,14 @@ i18n.db = {
         "form-error": {
             "t": ["Your message could not be sent due to an error. BG"],
             "v": []
+        },
+        "message": {
+            "t": ["съобщение"],
+            "v": []
+        },
+        "send-message": {
+            "t": ["изпращам"],
+            "v": []
         }
     }
 };  // 
@@ -121,7 +145,8 @@ function i18n_load(locale){
   else {
     i18n.locale = locale;
   }
-  var elements = document.querySelectorAll('[data-i18n-key]');
-  Array.from(elements, (el) => {el.innerHTML = i18n(el.getAttribute('data-i18n-key'))});
+  Array.from(document.querySelectorAll('[data-i18n-key]'), (el) => {el.innerHTML = i18n(el.getAttribute('data-i18n-key'))});
+  Array.from(document.querySelectorAll('[data-i18n-placeholder-key]'), (el) => {el.setAttribute('placeholder', i18n(el.getAttribute('data-i18n-placeholder-key')))});
+  Array.from(document.querySelectorAll('[data-i18n-value-key]'), (el) => {el.setAttribute('value', i18n(el.getAttribute('data-i18n-value-key')))});
 }
 i18n_load();
