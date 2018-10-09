@@ -52,6 +52,10 @@ body {
 	border: 1px solid rgba(239, 239, 239, 0.5);
 }
 
+.flag img:hover {
+	filter:opacity(80%);
+}
+
 .success {
 	color: #32CD32;
 	font-weight: 700;
